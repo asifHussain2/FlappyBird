@@ -1,6 +1,6 @@
 package fb;
-import javax.swing.*; // jframes jpanel, jlabels
-import java.awt.*; // color layouts
+import javax.swing.*;
+import java.awt.*; 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
