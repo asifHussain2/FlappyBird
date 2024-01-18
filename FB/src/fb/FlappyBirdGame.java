@@ -54,9 +54,25 @@ public class FlappyBirdGame extends JFrame implements ActionListener, KeyListene
 
         timer = new Timer(20, this);
         initializeBlocks();
+      gameLoopThread.start();
         setVisible(true);
+
     }
 
+    private class GameLoopThread extends Thread {
+        public void run() {
+            while (true) {
+                move();
+                gamePanel.repaint();
+
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
 
     private void initializeBlocks() {
         blocks.clear();
