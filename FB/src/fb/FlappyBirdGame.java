@@ -11,13 +11,13 @@ import java.util.Random;
 
 @SuppressWarnings("serial")
 public class FlappyBirdGame extends JFrame implements ActionListener, KeyListener {
-    private  int WIDTH = 800;
-    private  int HEIGHT = 600;
-    private  int GROUND_HEIGHT = 50;
-    private  int BIRD_SIZE = 30;
-    private  int BLOCK_WIDTH = 50;
-    private  int BLOCK_HEIGHT = 200;
-    private  int BLOCK_GAP = 150;
+    private static final int WIDTH = 800;  //mutable object
+    private static final int HEIGHT = 600;
+    private static final int GROUND_HEIGHT = 50;
+    private static final int BIRD_SIZE = 30;
+    private static final int BLOCK_WIDTH = 50;
+    private static final int BLOCK_HEIGHT = 200;
+    private static final int BLOCK_GAP = 150;
     
     private String difficulty;
     private int birdY;
