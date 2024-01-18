@@ -72,7 +72,7 @@ public class FlappyBirdGame extends JFrame implements ActionListener, KeyListene
                 game.move();
                 game.getGamePanel().repaint();
                 try {
-                    Thread.sleep(70); // Adjust the sleep time as needed
+                    Thread.sleep(100); // Adjust the sleep time as needed
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
