@@ -16,7 +16,7 @@ public class FlappyBirdGame extends JFrame implements ActionListener, KeyListene
     private static final int GROUND_HEIGHT = 50;
     private static final int BIRD_SIZE = 30;
     private static final int BLOCK_WIDTH = 50;
-    private static final int BLOCK_HEIGHT = 200;
+
     private static final int BLOCK_GAP = 150;
     
     private String difficulty;
@@ -335,9 +335,6 @@ public class FlappyBirdGame extends JFrame implements ActionListener, KeyListene
 		return BLOCK_WIDTH;
 	}
 
-	public int getBlockHeight() {
-		return BLOCK_HEIGHT;
-	}
 
 	public int getBlockGap() {
 		return BLOCK_GAP;
