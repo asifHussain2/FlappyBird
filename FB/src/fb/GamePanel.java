@@ -35,7 +35,7 @@ public class GamePanel extends JPanel {
     private Image loadImage(String path) throws NullPointerException{
         ImageIcon imageIcon = new ImageIcon(getClass().getResource(path));
         if (imageIcon.getImage() == null) {
-            throw new NullPointerPointerException("Null Image");
+            throw new NullPointerException("Null Image");
         }
         else{
         return imageIcon.getImage();
