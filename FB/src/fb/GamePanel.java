@@ -20,7 +20,7 @@ public class GamePanel extends JPanel {
         loadImages();
     }
 
-    private void loadImages() {
+     void loadImages() {
     try {
         birdImage = loadImage("/flappybird.png");
         backgroundImage = loadImage("/background.png");
