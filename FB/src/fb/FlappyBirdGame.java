@@ -11,7 +11,7 @@ import java.util.Random;
 
 @SuppressWarnings("serial")
 public class FlappyBirdGame extends JFrame implements ActionListener, KeyListener {
-    private static final int WIDTH = 800;  //mutable object
+    private static final int WIDTH = 800;  //immutable object
     private static final int HEIGHT = 600;
     private static final int GROUND_HEIGHT = 50;
     private static final int BIRD_SIZE = 30;
