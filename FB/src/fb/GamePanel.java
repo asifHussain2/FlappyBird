@@ -32,24 +32,14 @@ public class GamePanel extends JPanel {
     }
 }
 
-private Image loadImage(String imagePath) throws IOException {
-    try {
-        return ImageIO.read(getClass().getResource(imagePath));
-    } catch (IOException e) {
-        throw e;
-    } catch (Exception e) {
-        throw new RuntimeException("Error loading image: " + imagePath, e);
-    }
-}
-
-
-    private Image loadImage(String path) {
+    private Image loadImage(String path) throws NullPointerException{
         ImageIcon imageIcon = new ImageIcon(getClass().getResource(path));
         if (imageIcon.getImage() == null) {
-            System.err.println("Error loading image: " + path);
-            System.exit(1);
+            throw new NullPointerPointerException("Null Image");
         }
+        else{
         return imageIcon.getImage();
+        }
     }
 
     @Override
