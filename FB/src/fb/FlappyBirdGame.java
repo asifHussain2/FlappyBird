@@ -55,7 +55,31 @@ public class FlappyBirdGame extends JFrame implements ActionListener, KeyListene
         timer = new Timer(20, this);
         initializeBlocks();
         setVisible(true);
+      GameLoop gameLoop = new GameLoop(this);
+        new Thread(gameLoop).start();
     }
+
+    private static class GameLoop implements Runnable {
+        private FlappyBirdGame game;
+
+        public GameLoop(FlappyBirdGame game) {
+            this.game = game;
+        }
+
+        @Override
+        public void run() {
+            while (true) {
+                game.move();
+                game.getGamePanel().repaint();
+                try {
+                    Thread.sleep(70); // Adjust the sleep time as needed
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
 
     private void initializeBlocks() {
         blocks.clear();
