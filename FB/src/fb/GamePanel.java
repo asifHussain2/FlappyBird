@@ -21,11 +21,31 @@ public class GamePanel extends JPanel {
     }
 
     private void loadImages() {
+    try {
         birdImage = loadImage("/flappybird.png");
         backgroundImage = loadImage("/background.png");
         blockImage = loadImage("/block.png");
         groundImage = loadImage("/ground.png");
+    } catch (Exception e) {
+        // Handle the exception appropriately
+        e.printStackTrace(); // You might want to log the exception or show a user-friendly message
     }
+}
+
+private Image loadImage(String imagePath) throws IOException {
+    try {
+        // Assuming that you are using some Image loading mechanism, replace this with your actual implementation
+        // Example using ImageIO:
+        return ImageIO.read(getClass().getResource(imagePath));
+    } catch (IOException e) {
+        // Re-throw the IOException to be caught by the calling method
+        throw e;
+    } catch (Exception e) {
+        // Handle other exceptions that might occur during image loading
+        throw new RuntimeException("Error loading image: " + imagePath, e);
+    }
+}
+
 
     private Image loadImage(String path) {
         ImageIcon imageIcon = new ImageIcon(getClass().getResource(path));
